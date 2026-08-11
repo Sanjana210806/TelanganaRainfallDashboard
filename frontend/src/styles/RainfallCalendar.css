@@ -1,0 +1,414 @@
+/* ============================================================
+   RAINFALL CALENDAR
+============================================================ */
+
+.rainfall-calendar {
+    width: 100%;
+}
+
+
+/* ============================================================
+   CALENDAR TOP
+============================================================ */
+
+.calendar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+.calendar-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #6b91b1;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.calendar-top h3 {
+    margin: 0;
+
+    color: #315779;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   LEGEND
+============================================================ */
+
+.calendar-legend {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    color: #718aa0;
+
+    font-size: 8px;
+}
+
+.calendar-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.calendar-legend i {
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 3px;
+}
+
+
+/* ============================================================
+   LEGEND COLORS
+============================================================ */
+
+.legend-none {
+    background: #edf4fa;
+}
+
+.legend-low {
+    background: #a8c6e0;
+}
+
+.legend-medium {
+    background: #73a3cd;
+}
+
+.legend-high {
+    background: #4180b8;
+}
+
+.legend-extreme {
+    background: #254969;
+}
+
+
+/* ============================================================
+   MONTH GRID
+============================================================ */
+
+.months-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* ============================================================
+   MONTH CARD
+============================================================ */
+
+.month-card {
+    padding: 10px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.55);
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   MONTH TITLE
+============================================================ */
+
+.month-title {
+    margin-bottom: 7px;
+
+    text-align: center;
+
+    color: #3975a8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   WEEK HEADER
+============================================================ */
+
+.week-header {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    margin-bottom: 4px;
+
+    text-align: center;
+
+    color: #8ba1b3;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   MONTH DAYS
+============================================================ */
+
+.month-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 3px;
+}
+
+
+/* ============================================================
+   EMPTY CELL
+============================================================ */
+
+.calendar-empty {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+
+/* ============================================================
+   CALENDAR DAY
+============================================================ */
+
+.calendar-day {
+    width: 100%;
+    aspect-ratio: 1;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    color: #526f87;
+
+    font-size: 8px;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.calendar-day:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 3px 8px
+        rgba(35, 70, 100, 0.16);
+}
+
+
+/* ============================================================
+   RAINFALL LEVELS
+============================================================ */
+
+.calendar-day.rain-none {
+    background: #edf4fa;
+
+    color: #8ca0b0;
+}
+
+.calendar-day.rain-low {
+    background: #a8c6e0;
+
+    color: #315779;
+}
+
+.calendar-day.rain-medium {
+    background: #73a3cd;
+
+    color: #ffffff;
+}
+
+.calendar-day.rain-high {
+    background: #4180b8;
+
+    color: #ffffff;
+}
+
+.calendar-day.rain-extreme {
+    background: #254969;
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   SELECTED DATE
+============================================================ */
+
+.calendar-day.selected {
+    outline: 2px solid #ffffff;
+
+    box-shadow:
+        0 0 0 3px #4180b8,
+        0 5px 12px
+        rgba(65, 128, 184, 0.3);
+
+    transform: scale(1.08);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.calendar-loading {
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #6f8ba2;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   ERROR
+============================================================ */
+
+.calendar-error {
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 245, 245, 0.7);
+
+    color: #9c5b5b;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.calendar-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+    padding-top: 8px;
+
+    border-top:
+        1px solid
+        rgba(120, 150, 175, 0.15);
+
+    color: #8197a9;
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1200px) {
+
+    .months-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .months-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .calendar-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .months-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

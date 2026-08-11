@@ -1,0 +1,560 @@
+/* ============================================================
+   MONTHLY RAINFALL CONTENT
+============================================================ */
+
+.monthly-rainfall-content {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.monthly-chart-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 15px;
+
+}
+
+.monthly-chart-title span {
+
+    color: #7895ad;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.monthly-chart-title strong {
+
+    margin-top: 4px;
+
+    color: #315779;
+
+    font-size: 15px;
+
+}
+
+
+/* ============================================================
+   CHART
+============================================================ */
+
+.monthly-chart {
+
+    flex: 1;
+
+    display: flex;
+
+    width: 100%;
+
+    min-height: 320px;
+
+}
+
+
+/* ============================================================
+   Y AXIS
+============================================================ */
+
+.monthly-y-axis {
+
+    width: 38px;
+
+    height: 260px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding-right: 8px;
+
+    box-sizing: border-box;
+
+    text-align: right;
+
+}
+
+.monthly-y-axis span {
+
+    color: #7895ad;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+/* ============================================================
+   CHART AREA
+============================================================ */
+
+.monthly-chart-area {
+
+    position: relative;
+
+    flex: 1;
+
+    height: 260px;
+
+    min-width: 0;
+
+}
+
+
+/* ============================================================
+   GRID LINES
+============================================================ */
+
+.monthly-grid-lines {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+.monthly-grid-line {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background:
+        rgba(65, 128, 184, 0.12);
+
+}
+
+
+/* ============================================================
+   BAR GRID
+============================================================ */
+
+.monthly-bars {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 6px;
+
+    padding:
+        0
+        3px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ============================================================
+   BAR COLUMN
+============================================================ */
+
+.monthly-bar-column {
+
+    position: relative;
+
+    height: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+}
+
+
+/* ============================================================
+   BAR WRAPPER
+============================================================ */
+
+.monthly-bar-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: calc(100% - 24px);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+}
+
+
+/* ============================================================
+   BAR
+============================================================ */
+
+.monthly-bar {
+
+    position: relative;
+
+    width: 65%;
+
+    min-height: 2px;
+
+    border-radius:
+        6px
+        6px
+        2px
+        2px;
+
+    background:
+        linear-gradient(
+            to top,
+            #4180b8,
+            #8dbbdc
+        );
+
+    cursor: pointer;
+
+    transition:
+        height 0.4s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* ============================================================
+   BAR HOVER
+============================================================ */
+
+.monthly-bar:hover {
+
+    transform:
+        scaleX(1.08);
+
+}
+
+
+/* ============================================================
+   TOOLTIP
+============================================================ */
+
+.monthly-bar-tooltip {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: calc(100% + 8px);
+
+    transform:
+        translateX(-50%)
+        translateY(5px);
+
+    min-width: 82px;
+
+    padding:
+        7px
+        9px;
+
+    border-radius: 7px;
+
+    background: #315779;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    box-shadow:
+        0 5px 14px
+        rgba(35, 70, 100, 0.20);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* ============================================================
+   TOOLTIP MONTH
+============================================================ */
+
+.monthly-bar-tooltip strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+/* ============================================================
+   TOOLTIP RAINFALL
+============================================================ */
+
+.monthly-bar-tooltip span {
+
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================================
+   SHOW TOOLTIP
+============================================================ */
+
+.monthly-bar:hover
+.monthly-bar-tooltip {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+/* ============================================================
+   MONTH LABEL
+============================================================ */
+
+.monthly-month-label {
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    color: #7895ad;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+
+.monthly-chart-empty {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #7895ad;
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================================
+   ERROR STATE
+============================================================ */
+
+.monthly-chart-error {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #9b5d5d;
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .monthly-y-axis {
+
+        width: 34px;
+
+        padding-right: 6px;
+
+    }
+
+    .monthly-bars {
+
+        gap: 4px;
+
+    }
+
+    .monthly-bar {
+
+        width: 70%;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .monthly-chart {
+
+        min-height: 290px;
+
+    }
+
+    .monthly-chart-area {
+
+        height: 235px;
+
+    }
+
+    .monthly-y-axis {
+
+        width: 30px;
+
+        height: 235px;
+
+    }
+
+    .monthly-y-axis span {
+
+        font-size: 7px;
+
+    }
+
+    .monthly-bars {
+
+        gap: 3px;
+
+        padding:
+            0
+            2px;
+
+    }
+
+    .monthly-bar {
+
+        width: 75%;
+
+    }
+
+    .monthly-month-label {
+
+        font-size: 7px;
+
+    }
+
+    .monthly-bar-tooltip {
+
+        min-width: 72px;
+
+        padding:
+            6px
+            7px;
+
+    }
+
+    .monthly-bar-tooltip strong,
+    .monthly-bar-tooltip span {
+
+        font-size: 8px;
+
+    }
+
+}

@@ -1,0 +1,369 @@
+/* ============================================================
+   APP LAYOUT
+============================================================ */
+
+.app-layout{
+    width:100%;
+    min-height:100vh;
+    background:#edf4fa;
+}
+
+.main-area{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    min-height:100vh;
+    position:relative;
+}
+
+
+/* ============================================================
+   PAGE CONTENT
+============================================================ */
+
+.page-content{
+    width:100%;
+    padding:0;
+}
+
+
+/* ============================================================
+   DASHBOARD
+============================================================ */
+
+.dashboard-page{
+    position:relative;
+    min-height:calc(100vh - 68px);
+    overflow:hidden;
+}
+
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.dashboard-background{
+    position:absolute;
+    inset:0;
+    background-image:url("../image/rainfall-dashboard-bg.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    z-index:0;
+    pointer-events:none;
+}
+
+
+/* ============================================================
+   DASHBOARD CONTENT
+============================================================ */
+
+.dashboard-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+    padding:22px 28px 35px;
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   INTRO / HERO SECTION
+============================================================ */
+
+.dashboard-intro{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:100px;
+    margin-bottom:18px;
+    text-align:center;
+}
+
+
+/* ============================================================
+   CENTER TITLE CONTENT
+============================================================ */
+
+.dashboard-intro > div:first-child{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.section-eyebrow{
+    margin:0 0 4px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.6px;
+    color:#f7f3ec;
+    text-shadow:0 1px 6px rgba(20,45,75,.45);
+}
+
+
+/* ============================================================
+   MAIN TITLE
+============================================================ */
+
+.dashboard-intro h2{
+    margin:0;
+    font-size:32px;
+    line-height:1.15;
+    font-weight:700;
+    color:#fffaf2;
+    text-shadow:0 2px 8px rgba(20,45,75,.55);
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.dashboard-description{
+    max-width:800px;
+    margin:7px auto 0;
+    font-size:13px;
+    line-height:1.5;
+    color:#f3eee6;
+    text-shadow:0 1px 6px rgba(20,45,75,.5);
+}
+
+
+/* ============================================================
+   YEAR BADGE
+============================================================ */
+
+.dashboard-year{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    flex-shrink:0;
+    padding:14px 20px;
+    min-width:65px;
+    border-radius:14px;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:0 5px 18px rgba(55,90,120,.08);
+    backdrop-filter:blur(10px);
+    color:#3f73a5;
+    font-size:18px;
+    font-weight:700;
+    text-align:center;
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   DASHBOARD CARD
+============================================================ */
+
+.dashboard-card{
+    margin-bottom:16px;
+    padding:18px;
+    border-radius:17px;
+    background:rgba(255,255,255,.76);
+    border:1px solid rgba(255,255,255,.88);
+    box-shadow:0 8px 28px rgba(55,85,115,.08);
+    backdrop-filter:blur(12px);
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   CARD HEADING
+============================================================ */
+
+.card-heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:13px;
+}
+
+.card-eyebrow{
+    margin:0 0 3px;
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    color:#7590a8;
+}
+
+.card-heading h3{
+    margin:0;
+    font-size:17px;
+    line-height:1.2;
+    color:#2d4660;
+}
+
+
+/* ============================================================
+   CALENDAR PLACEHOLDER
+============================================================ */
+
+.calendar-placeholder{
+    min-height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:rgba(232,243,251,.48);
+    border:1px dashed rgba(75,120,155,.28);
+    color:#7890a6;
+    font-size:12px;
+}
+
+
+/* ============================================================
+   DAILY PLACEHOLDER
+============================================================ */
+
+.daily-placeholder{
+    min-height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:rgba(238,246,252,.52);
+    color:#71879b;
+    font-size:12px;
+}
+
+
+/* ============================================================
+   DAILY ANALYSIS SCROLL TARGET
+============================================================ */
+
+.daily-card{
+    scroll-margin-top:20px;
+}
+
+
+/* ============================================================
+   CALENDAR CARD
+============================================================ */
+
+.calendar-card{
+    margin-bottom:20px;
+}
+
+
+/* ============================================================
+   DAILY CARD
+============================================================ */
+
+.daily-card{
+    min-height:300px;
+}
+
+
+/* ============================================================
+   LARGE SCREEN
+============================================================ */
+
+@media(min-height:800px){
+
+    .dashboard-content{
+        padding-top:26px;
+    }
+}
+
+
+/* ============================================================
+   SMALL SCREEN HEIGHT
+============================================================ */
+
+@media(max-height:750px){
+
+    .dashboard-content{
+        padding-top:15px;
+        padding-bottom:20px;
+    }
+
+    .dashboard-intro{
+        margin-bottom:12px;
+    }
+
+    .dashboard-card{
+        padding:14px;
+        margin-bottom:12px;
+    }
+
+    .calendar-placeholder{
+        min-height:150px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE WIDTH
+============================================================ */
+
+@media(max-width:900px){
+
+    .main-area{
+        margin-left:250px;
+        width:calc(100% - 250px);
+    }
+
+    .dashboard-content{
+        padding:20px;
+    }
+
+    .dashboard-intro h2{
+        font-size:28px;
+    }
+
+    .dashboard-description{
+        max-width:650px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media(max-width:600px){
+
+    .dashboard-intro{
+        min-height:auto;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .dashboard-intro > div:first-child{
+        width:100%;
+    }
+
+    .section-eyebrow{
+        font-size:10px;
+    }
+
+    .dashboard-intro h2{
+        font-size:25px;
+    }
+
+    .dashboard-description{
+        max-width:100%;
+        font-size:12px;
+    }
+
+    .dashboard-year{
+        position:static;
+        transform:none;
+        margin-top:12px;
+        padding:10px 16px;
+        font-size:15px;
+    }
+
+    .dashboard-content{
+        padding:16px;
+    }
+}

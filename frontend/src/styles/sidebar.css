@@ -1,0 +1,236 @@
+/* ============================================================
+   SIDEBAR
+============================================================ */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px 14px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-right: 1px solid #d8e2ec;
+
+    box-shadow:
+        5px 0 20px rgba(35, 70, 100, 0.06);
+
+    z-index: 1000;
+}
+
+
+/* ============================================================
+   BRAND
+============================================================ */
+
+.sidebar-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 10px 25px;
+
+    border-bottom: 1px solid #e8eef4;
+}
+
+
+.brand-mark {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #4180b8;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+.brand-text h2 {
+
+    margin: 0;
+
+    color: #263e57;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.brand-text span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #8094a4;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+
+.sidebar-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 8px;
+}
+
+
+.nav-label {
+
+    margin: 18px 10px 5px;
+
+    color: #91a2b0;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+.nav-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border-radius: 10px;
+
+    color: #596f83;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-item svg {
+
+    flex-shrink: 0;
+}
+
+
+.nav-item:hover {
+
+    background: #eaf3fa;
+
+    color: #386e9f;
+
+    transform: translateX(2px);
+}
+
+
+.nav-item.active {
+
+    background: #4180b8;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px rgba(65, 128, 184, 0.22);
+}
+
+
+.nav-item.active svg {
+
+    stroke-width: 2.5;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.sidebar-footer {
+
+    margin-top: auto;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background: #edf5fb;
+
+    border: 1px solid #dceaf4;
+}
+
+
+.sidebar-footer div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.sidebar-footer span {
+
+    color: #8a9baa;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+.sidebar-footer strong {
+
+    color: #386e9f;
+
+    font-size: 13px;
+}

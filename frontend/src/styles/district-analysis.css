@@ -1,0 +1,613 @@
+/* ============================================================
+   DISTRICT ANALYSIS PAGE
+============================================================ */
+
+.district-analysis-page{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    padding:25px 30px 40px;
+    background-image:url("../image/rainfall-dashboard-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+
+/* ============================================================
+   PAGE HEADER
+============================================================ */
+
+.district-page-header{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    margin-bottom:22px;
+    text-align:center;
+}
+
+.district-eyebrow{
+    margin:0 0 6px;
+    color:#f7f3ec;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.6px;
+    text-shadow:0 1px 4px rgba(35,55,75,.35);
+}
+
+.district-page-header h1{
+    margin:0;
+    color:#fffaf2;
+    font-size:32px;
+    font-weight:700;
+    text-shadow:0 2px 6px rgba(35,55,75,.4);
+}
+
+.district-page-header p{
+    max-width:1050px;
+    margin:8px auto 0;
+    color:#f3eee6;
+    font-size:13px;
+    line-height:1.5;
+    text-shadow:0 1px 4px rgba(35,55,75,.3);
+}
+
+
+/* ============================================================
+   SELECTED DISTRICT
+============================================================ */
+
+.selected-district{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    min-width:150px;
+    padding:12px 16px;
+    border-radius:12px;
+    background:rgba(255,255,255,.55);
+    border:1px solid rgba(255,255,255,.72);
+    box-shadow:0 5px 18px rgba(35,70,100,.06);
+    backdrop-filter:blur(6px);
+    text-align:right;
+}
+
+.selected-district span{
+    display:block;
+    color:#718da5;
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.selected-district strong{
+    display:block;
+    margin-top:4px;
+    color:#386e9f;
+    font-size:14px;
+}
+
+
+/* ============================================================
+   MAIN KPI GRID
+============================================================ */
+
+.district-kpis{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    width:100%;
+    margin-bottom:20px;
+}
+
+
+/* ============================================================
+   KPI CARD
+============================================================ */
+
+.district-kpi{
+    min-width:0;
+    min-height:90px;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,.62);
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:0 6px 20px rgba(35,70,100,.08);
+    backdrop-filter:blur(7px);
+    box-sizing:border-box;
+    text-align:center;
+}
+
+.district-kpi span{
+    display:block;
+    color:#6f91ad;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.district-kpi strong{
+    display:inline-block;
+    margin-top:9px;
+    color:#315f84;
+    font-size:27px;
+    font-weight:700;
+}
+
+.district-kpi small{
+    margin-left:4px;
+    color:#7190a8;
+    font-size:10px;
+    font-weight:600;
+}
+
+
+/* ============================================================
+   MAP + MONTHLY CHART
+   60% MAP / 40% CHART
+============================================================ */
+
+.district-visual-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:3fr 2fr;
+    gap:20px;
+    width:100%;
+    margin-bottom:20px;
+}
+
+
+/* ============================================================
+   MAP CARD
+============================================================ */
+
+.district-map-card{
+    width:100%;
+    min-width:0;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.58);
+    border:1px solid rgba(255,255,255,.72);
+    box-shadow:0 8px 28px rgba(35,70,100,.08);
+    backdrop-filter:blur(7px);
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   MONTHLY CARD
+============================================================ */
+
+.monthly-rainfall-card{
+    width:100%;
+    min-width:0;
+    min-height:100%;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.58);
+    border:1px solid rgba(255,255,255,.72);
+    box-shadow:0 8px 28px rgba(35,70,100,.08);
+    backdrop-filter:blur(7px);
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+
+/* ============================================================
+   SECTION HEADER
+============================================================ */
+
+.district-section-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:15px;
+}
+
+.district-section-header span{
+    display:block;
+    margin-bottom:4px;
+    color:#6b94b5;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1.1px;
+}
+
+.district-section-header h2{
+    margin:0;
+    color:#315779;
+    font-size:20px;
+    font-weight:700;
+}
+
+.district-section-header>strong{
+    padding:8px 12px;
+    border-radius:8px;
+    background:rgba(237,245,251,.7);
+    color:#4180b8;
+    font-size:11px;
+    white-space:nowrap;
+}
+
+
+/* ============================================================
+   MAP ACTION
+============================================================ */
+
+.map-action{
+    color:#66839b;
+    font-size:10px;
+    white-space:nowrap;
+}
+
+.map-action button{
+    padding:8px 13px;
+    border:1px solid rgba(65,128,184,.14);
+    border-radius:8px;
+    background:rgba(232,242,250,.75);
+    color:#4180b8;
+    font-size:10px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.map-action button:hover{
+    background:rgba(220,236,247,.9);
+    transform:translateY(-1px);
+}
+
+
+/* ============================================================
+   MONTHLY CHART
+============================================================ */
+
+.monthly-rainfall-chart{
+    width:100%;
+    height:440px;
+    min-width:0;
+}
+
+
+/* ============================================================
+   DISTRICT SUMMARY CARD
+============================================================ */
+
+.district-data-card{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.58);
+    border:1px solid rgba(255,255,255,.72);
+    box-shadow:0 8px 28px rgba(35,70,100,.08);
+    backdrop-filter:blur(7px);
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   SUMMARY
+============================================================ */
+
+.district-summary-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.district-summary-grid>div{
+    padding:15px;
+    border-radius:12px;
+    background:rgba(237,245,251,.48);
+    border:1px solid rgba(255,255,255,.65);
+}
+
+.district-summary-grid span{
+    display:block;
+    color:#718da5;
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:.9px;
+}
+
+.district-summary-grid strong{
+    display:block;
+    margin-top:7px;
+    color:#315779;
+    font-size:20px;
+}
+
+.district-summary-grid small{
+    margin-left:4px;
+    color:#7893a9;
+    font-size:9px;
+}
+
+
+/* ============================================================
+   HIGHEST RAINFALL DATE
+============================================================ */
+
+.district-summary-grid .kpi-date{
+    font-size:18px;
+    white-space:nowrap;
+}
+
+
+/* ============================================================
+   DAILY RAINFALL
+============================================================ */
+
+.daily-table-empty{
+    height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:rgba(237,245,251,.42);
+    border:1px dashed rgba(65,128,184,.22);
+    color:#7895ad;
+    font-size:12px;
+    text-align:center;
+}
+
+.daily-table-empty strong{
+    display:block;
+    color:#4180b8;
+    font-size:28px;
+}
+
+.daily-table-empty p{
+    margin:6px 0 0;
+    color:#8aa0b1;
+    font-size:11px;
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.district-loading-card{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:30px;
+    margin-bottom:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.58);
+    border:1px solid rgba(255,255,255,.72);
+    color:#66839b;
+    text-align:center;
+    font-size:12px;
+    box-sizing:border-box;
+}
+
+.district-loading-card strong{
+    color:#315779;
+}
+
+
+/* ============================================================
+   ERROR
+============================================================ */
+
+.district-error-card{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:18px;
+    background:rgba(255,245,245,.72);
+    border:1px solid rgba(180,100,100,.18);
+    color:#9b5d5d;
+    text-align:center;
+    font-size:12px;
+    box-sizing:border-box;
+}
+
+
+/* ============================================================
+   SELECT DISTRICT MESSAGE
+============================================================ */
+
+.district-instruction{
+    position:relative;
+    z-index:2;
+    min-height:130px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:5px;
+    border-radius:15px;
+    background:rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.65);
+    box-shadow:0 5px 18px rgba(35,70,100,.04);
+    backdrop-filter:blur(5px);
+    text-align:center;
+}
+
+.district-instruction div{
+    color:#6c9ac0;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.district-instruction h3{
+    margin:7px 0 3px;
+    color:#4d718d;
+    font-size:16px;
+}
+
+.district-instruction p{
+    margin:0;
+    color:#7f97aa;
+    font-size:11px;
+}
+
+
+/* ============================================================
+   LARGE SCREENS
+============================================================ */
+
+@media (min-width:1400px){
+
+    .district-analysis-page{
+        padding:28px 35px 45px;
+    }
+
+    .district-page-header h1{
+        font-size:34px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width:1100px){
+
+    .district-visual-grid{
+        grid-template-columns:1fr;
+    }
+
+    .monthly-rainfall-chart{
+        height:350px;
+    }
+
+    .district-kpis{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .selected-district{
+        position:static;
+        transform:none;
+        margin-top:12px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width:700px){
+
+    .district-analysis-page{
+        padding:18px;
+        background-attachment:scroll;
+    }
+
+    .district-page-header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .district-page-header h1{
+        font-size:25px;
+    }
+
+    .district-page-header p{
+        font-size:12px;
+        max-width:100%;
+    }
+
+    .selected-district{
+        position:static;
+        width:100%;
+        margin-top:12px;
+        text-align:left;
+    }
+
+    .district-kpis{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .district-visual-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .district-map-card,
+    .monthly-rainfall-card,
+    .district-data-card{
+        padding:14px;
+    }
+
+    .district-section-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .district-section-header>strong{
+        align-self:flex-start;
+    }
+
+    .district-map-wrapper{
+        height:420px;
+    }
+
+    .monthly-rainfall-chart{
+        height:300px;
+    }
+
+    .district-summary-grid{
+        grid-template-columns:1fr;
+    }
+
+    .daily-table-empty{
+        height:220px;
+    }
+
+    .district-summary-grid .kpi-date{
+        font-size:17px;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width:480px){
+
+    .district-analysis-page{
+        padding:14px;
+    }
+
+    .district-kpi strong{
+        font-size:24px;
+    }
+
+    .district-page-header h1{
+        font-size:23px;
+    }
+
+    .district-eyebrow{
+        font-size:10px;
+        letter-spacing:1.4px;
+    }
+
+    .district-summary-grid .kpi-date{
+        font-size:16px;
+    }
+}

@@ -1,0 +1,639 @@
+/* =========================================================
+   HUMIDITY PAGE
+========================================================= */
+
+.humidity-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 18px 28px 50px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: #315b7d;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.humidity-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+}
+
+.humidity-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 48, 78, .28),
+            rgba(83, 70, 115, .20)
+        );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.humidity-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.humidity-hero {
+    position: relative;
+
+    width: calc(100% - 10px);
+    min-height: 225px;
+
+    margin: 0 auto 22px;
+    padding: 35px 160px 35px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 28px;
+
+    background:
+        url("../image/rainfall-dashboard-bg.png")
+        center / cover no-repeat;
+
+    box-shadow:
+        0 12px 30px rgba(30,60,95,.18);
+}
+
+.humidity-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,48,78,.68),
+            rgba(61,92,130,.56),
+            rgba(91,70,115,.56)
+        );
+}
+
+.humidity-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+}
+
+.humidity-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.35);
+}
+
+.humidity-hero-content h1 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.08;
+
+    font-weight: 800;
+    text-align: center;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.4);
+}
+
+.humidity-hero-content p {
+    margin: 12px auto 0;
+
+    max-width: 950px;
+
+    color: rgba(255,255,255,.96);
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.35);
+}
+
+.humidity-year {
+    position: absolute;
+    z-index: 3;
+
+    top: 50%;
+    right: 28px;
+
+    transform: translateY(-50%);
+
+    min-width: 72px;
+
+    padding: 16px 22px;
+
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.78);
+
+    backdrop-filter: blur(12px);
+
+    color: #3479ae;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.15);
+}
+
+
+/* =========================================================
+   KPI
+========================================================= */
+
+.humidity-kpis {
+    max-width: 1400px;
+    margin: 0 auto 22px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.humidity-kpi {
+    min-height: 105px;
+    padding: 18px 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.75),
+            rgba(224,237,248,.62)
+        );
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 22px rgba(55,85,110,.1);
+}
+
+.humidity-kpi span {
+    display: block;
+
+    color: #6a8da8;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.humidity-kpi strong {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #3479ae;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.humidity-kpi small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #819caf;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.humidity-grid {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+/* 50 : 50 */
+
+.humidity-two-column {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.humidity-card {
+    min-width: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(236,244,253,.82),
+            rgba(248,243,248,.78)
+        );
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 28px rgba(50,75,100,.12);
+}
+
+.humidity-card.large,
+.humidity-card.small {
+    min-height: 350px;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.card-heading {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-heading span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #6591af;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.card-heading h2 {
+    margin: 0;
+
+    color: #315d80;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CHARTS
+========================================================= */
+
+.chart-box {
+    width: 100%;
+    height: 270px;
+}
+
+.donut-box {
+    width: 100%;
+    height: 175px;
+}
+
+
+/* =========================================================
+   HUMIDITY VS RAINFALL
+========================================================= */
+
+.humidity-rainfall-chart {
+    width: 100%;
+    height: 290px;
+}
+
+
+/* =========================================================
+   DISTRICT COMPARISON
+========================================================= */
+
+.humidity-district-chart {
+    width: 100%;
+    height: 290px;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-chart {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #7795ab;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.legend-list {
+    margin-top: 4px;
+}
+
+.legend-item {
+    display: grid;
+
+    grid-template-columns: 12px 1fr auto;
+
+    gap: 9px;
+
+    align-items: center;
+
+    padding: 6px 2px;
+
+    color: #698aa2;
+
+    font-size: 12px;
+}
+
+.legend-item strong {
+    color: #3479ae;
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   HEATMAP
+========================================================= */
+
+.heatmap-card {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heatmap-scroll {
+    width: 100%;
+
+    max-height: 420px;
+
+    overflow-x: auto;
+    overflow-y: auto;
+
+    border-radius: 14px;
+}
+
+.heatmap {
+    min-width: 900px;
+}
+
+.heatmap-row {
+    display: grid;
+
+    grid-template-columns:
+        170px
+        repeat(12, minmax(55px, 1fr));
+
+    gap: 3px;
+
+    margin-bottom: 3px;
+}
+
+.heatmap-row > div {
+    min-height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    color: #416d8e;
+}
+
+.heatmap-header > div {
+    color: #557d99;
+
+    font-weight: 800;
+
+    background:
+        rgba(255,255,255,.42);
+}
+
+.heatmap-row .district-name {
+    justify-content: flex-start;
+
+    padding-left: 10px;
+
+    font-weight: 700;
+
+    background:
+        rgba(255,255,255,.42);
+}
+
+.heat-cell {
+    border:
+        1px solid
+        rgba(255,255,255,.4);
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease;
+}
+
+.heat-cell:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.humidity-loading,
+.humidity-error {
+    position: relative;
+    z-index: 3;
+
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 22px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.4);
+}
+
+.humidity-error {
+    color: #ffd1d1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .humidity-kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .humidity-grid,
+    .humidity-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .humidity-card.large,
+    .humidity-card.small {
+        min-height: 330px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .humidity-page {
+        padding: 12px;
+    }
+
+    .humidity-hero {
+        width: 100%;
+        min-height: 270px;
+
+        padding:
+            30px
+            20px
+            80px;
+
+        border-radius: 20px;
+    }
+
+    .humidity-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .humidity-hero-content p {
+        font-size: 14px;
+    }
+
+    .humidity-eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+    }
+
+    .humidity-year {
+        top: auto;
+        right: 50%;
+        bottom: 15px;
+
+        transform: translateX(50%);
+
+        padding: 9px 20px;
+
+        font-size: 21px;
+    }
+
+    .humidity-kpis {
+        grid-template-columns: 1fr;
+    }
+
+    .humidity-card {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .card-heading h2 {
+        font-size: 21px;
+    }
+
+    .chart-box {
+        height: 245px;
+    }
+
+    .donut-box {
+        height: 175px;
+    }
+
+    .humidity-rainfall-chart,
+    .humidity-district-chart {
+        height: 280px;
+    }
+}

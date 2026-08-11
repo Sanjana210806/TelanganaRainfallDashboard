@@ -1,0 +1,896 @@
+/* ============================================================
+   DAILY ANALYSIS
+============================================================ */
+
+.daily-analysis {
+    width: 100%;
+}
+
+
+/* ============================================================
+   SELECTED DATE
+============================================================ */
+
+.selected-date-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.selected-label {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #6b9ac3;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.selected-date-header h3 {
+    margin: 0;
+
+    color: #315779;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.date-badge {
+    padding: 8px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(65, 128, 184, 0.12);
+
+    border: 1px solid rgba(65, 128, 184, 0.22);
+
+    color: #4180b8;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   KPI CARDS
+============================================================ */
+
+.daily-kpi-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.daily-kpi-card {
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 13px 15px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 5px 18px rgba(35, 70, 100, 0.07);
+
+    backdrop-filter: blur(8px);
+}
+
+.daily-kpi-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #7a94aa;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.9px;
+}
+
+.daily-kpi-card strong {
+    color: #315779;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.daily-kpi-card small {
+    margin-left: 3px;
+
+    color: #6f8ba2;
+
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   SUMMARY
+============================================================ */
+
+.daily-summary-row {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.summary-mini-card {
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: rgba(239, 247, 252, 0.6);
+
+    border: 1px solid rgba(210, 228, 240, 0.7);
+}
+
+.summary-mini-card span {
+    display: block;
+
+    color: #7895ad;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.summary-mini-card strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #386e9f;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.summary-mini-card small {
+    color: #91a4b4;
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   COMMON SECTION HEADER
+============================================================ */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.section-header span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #7895ad;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.section-header h3 {
+    margin: 0;
+
+    color: #315779;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.mandal-count {
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: rgba(65, 128, 184, 0.1);
+
+    color: #4180b8;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   TOP 5 MANDALS
+============================================================ */
+
+.top-five-section {
+    width: 100%;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+
+    padding: 16px 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border: 1px solid rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 5px 18px rgba(35, 70, 100, 0.06);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ============================================================
+   TOP 5 HEADER
+============================================================ */
+
+.top-five-section .section-header {
+    margin-bottom: 12px;
+}
+
+.top-five-section .section-header span {
+    color: #6f91ad;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+}
+
+.top-five-section .section-header h3 {
+    margin-top: 4px;
+
+    color: #315779;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   TOP 5 GRID
+============================================================ */
+
+.top-five-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* ============================================================
+   TOP 5 CARD
+============================================================ */
+
+.top-five-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 78px;
+
+    padding: 12px 10px;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    background: #edf5fb;
+
+    border: 1px solid #dceaf4;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.top-five-card:hover {
+    transform: translateY(-2px);
+
+    background: #e5f1f9;
+}
+
+
+/* ============================================================
+   TOP 5 RANK
+============================================================ */
+
+.top-five-rank {
+    position: absolute;
+
+    left: 10px;
+    bottom: 12px;
+
+    color: #4180b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   TOP 5 INFORMATION
+============================================================ */
+
+.top-five-info {
+    width: 100%;
+
+    padding: 0 52px 0 24px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    min-width: 0;
+}
+
+
+/* ============================================================
+   TOP 5 MANDAL NAME
+============================================================ */
+
+.top-five-info strong {
+    display: block;
+
+    color: #304b65;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    /*
+       IMPORTANT:
+       Keep complete words together.
+       Do not break a word into pieces.
+    */
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: normal;
+
+    hyphens: none;
+
+    overflow: visible;
+
+    text-overflow: clip;
+}
+
+
+/* ============================================================
+   TOP 5 DISTRICT
+============================================================ */
+
+.top-five-info span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #8094a4;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: normal;
+
+    hyphens: none;
+
+    overflow: visible;
+
+    text-overflow: clip;
+}
+
+
+/* ============================================================
+   TOP 5 RAINFALL
+============================================================ */
+
+.top-five-rain {
+    position: absolute;
+
+    right: 10px;
+    bottom: 12px;
+
+    color: #386e9f;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.top-five-rain small {
+    margin-left: 2px;
+
+    color: #718ba1;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   MANDAL ANALYSIS
+============================================================ */
+
+.top-mandals-section {
+    width: 100%;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 5px 18px rgba(35, 70, 100, 0.06);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ============================================================
+   FILTERS
+============================================================ */
+
+.mandal-filters {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.mandal-search {
+    flex: 1;
+}
+
+.mandal-search input,
+.district-filter select {
+    width: 100%;
+    height: 32px;
+
+    box-sizing: border-box;
+
+    padding: 0 10px;
+
+    border: 1px solid #d6e2ec;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #526b80;
+
+    font-size: 10px;
+}
+
+.district-filter {
+    width: 180px;
+}
+
+.mandal-search input:focus,
+.district-filter select:focus {
+    border-color: #7da4c2;
+}
+
+
+/* ============================================================
+   MANDAL TABLE
+============================================================ */
+
+.mandal-table-wrapper {
+    width: 100%;
+
+    height: 280px;
+
+    overflow-y: auto;
+    overflow-x: auto;
+
+    border: 1px solid #dbe6ef;
+
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.mandal-table {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   STICKY TABLE HEADER
+============================================================ */
+
+.mandal-table thead {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 5;
+}
+
+.mandal-table th {
+    height: 34px;
+
+    padding: 0 10px;
+
+    background: #dceaf5;
+
+    color: #386e9f;
+
+    border-bottom: 1px solid #cbdce9;
+
+    text-align: left;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   TABLE CELLS
+============================================================ */
+
+.mandal-table td {
+    height: 34px;
+
+    padding: 0 10px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    color: #596f83;
+
+    border-bottom: 1px solid #e5edf3;
+
+    white-space: nowrap;
+}
+
+.mandal-table tbody tr:hover td {
+    background: #edf5fb;
+}
+
+
+/* ============================================================
+   TABLE CONTENT
+============================================================ */
+
+.rank-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 27px;
+
+    padding: 3px 6px;
+
+    border-radius: 5px;
+
+    background: #e8f2f9;
+
+    color: #4180b8;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.mandal-table td strong {
+    color: #304b65;
+
+    font-weight: 600;
+}
+
+.district-name {
+    color: #71879b;
+
+    font-size: 9px;
+}
+
+.rainfall-value {
+    color: #386e9f !important;
+
+    font-weight: 700;
+}
+
+.rainfall-value small {
+    margin-left: 2px;
+
+    color: #8094a4;
+
+    font-size: 7px;
+}
+
+.no-results {
+    height: 80px !important;
+
+    text-align: center;
+
+    color: #8094a4 !important;
+}
+
+
+/* ============================================================
+   TABLE SCROLLBAR
+============================================================ */
+
+.mandal-table-wrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.mandal-table-wrapper::-webkit-scrollbar-track {
+    background: #edf4fa;
+}
+
+.mandal-table-wrapper::-webkit-scrollbar-thumb {
+    background: #9bb9d1;
+
+    border-radius: 10px;
+}
+
+.mandal-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #7da4c2;
+}
+
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+
+.mandal-pagination {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 9px;
+
+    color: #8094a4;
+
+    font-size: 9px;
+}
+
+.pagination-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.pagination-buttons button {
+    padding: 5px 9px;
+
+    border: 1px solid #d5e2ec;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #386e9f;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    background: #eaf3fa;
+}
+
+.pagination-buttons button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.pagination-buttons span {
+    color: #61778d;
+
+    font-size: 9px;
+}
+
+
+/* ============================================================
+   EMPTY / LOADING / ERROR
+============================================================ */
+
+.daily-empty,
+.daily-loading,
+.daily-error {
+    min-height: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 13px;
+}
+
+
+/* EMPTY */
+
+.daily-empty {
+    background: rgba(238, 246, 252, 0.45);
+
+    color: #7890a6;
+}
+
+.daily-empty h3 {
+    margin: 0 0 5px;
+
+    color: #4c6d88;
+
+    font-size: 15px;
+}
+
+.daily-empty p {
+    margin: 0;
+
+    color: #8a9eae;
+
+    font-size: 11px;
+}
+
+
+/* LOADING */
+
+.daily-loading {
+    color: #718ba1;
+
+    font-size: 12px;
+}
+
+
+/* ERROR */
+
+.daily-error {
+    background: rgba(255, 245, 245, 0.65);
+
+    border: 1px solid rgba(200, 100, 100, 0.15);
+}
+
+.daily-error h3 {
+    margin: 0 0 5px;
+
+    color: #9c5b5b;
+
+    font-size: 14px;
+}
+
+.daily-error p {
+    margin: 0;
+
+    color: #a77a7a;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .daily-kpi-grid,
+    .daily-summary-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-five-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .top-five-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .daily-kpi-grid,
+    .daily-summary-row {
+        grid-template-columns: 1fr;
+    }
+
+    .mandal-filters {
+        flex-direction: column;
+    }
+
+    .district-filter {
+        width: 100%;
+    }
+
+    .mandal-table-wrapper {
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .top-five-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-five-card {
+        min-height: 75px;
+    }
+
+    .top-five-info {
+        padding-right: 50px;
+    }
+}

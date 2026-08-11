@@ -1,0 +1,148 @@
+.district-daily-table-wrapper{
+    width:100%;
+}
+
+.district-daily-table-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+    color:#6b94b5;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.district-daily-table-info strong{
+    color:#4180b8;
+    font-size:12px;
+}
+
+.district-daily-scroll{
+    max-height:450px;
+    overflow-y:auto;
+    border-radius:14px;
+    background:rgba(255,255,255,.25);
+}
+
+.district-daily-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.district-daily-table th{
+    position:sticky;
+    top:0;
+    z-index:2;
+    padding:14px 16px;
+    background:#dcecf7;
+    color:#315779;
+    font-size:12px;
+    font-weight:700;
+    text-align:left;
+}
+
+.district-daily-table td{
+    padding:13px 16px;
+    border-bottom:1px solid rgba(65,128,184,.10);
+    color:#607d94;
+    font-size:12px;
+}
+
+.district-daily-table td:first-child{
+    width:70px;
+    text-align:center;
+}
+
+.district-daily-table td strong{
+    color:#4180b8;
+}
+
+.district-daily-pagination{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-top:16px;
+}
+
+.district-daily-pagination button{
+    min-width:34px;
+    height:34px;
+    padding:0 10px;
+    border:1px solid rgba(65,128,184,.18);
+    border-radius:8px;
+    background:rgba(255,255,255,.65);
+    color:#4180b8;
+    font-size:11px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.district-daily-pagination button:hover:not(:disabled){
+    background:#dcecf7;
+}
+
+.district-daily-pagination button.active{
+    background:#4180b8;
+    color:#fff;
+}
+
+.district-daily-pagination button:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+}
+
+.district-page-numbers{
+    display:flex;
+    gap:5px;
+    max-width:500px;
+    overflow-x:auto;
+    padding:2px;
+}
+
+.district-page-info{
+    margin-top:9px;
+    color:#7895ad;
+    font-size:10px;
+    text-align:center;
+}
+
+.district-daily-empty,
+.district-daily-error{
+    min-height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:rgba(255,255,255,.4);
+    color:#7895ad;
+    font-size:12px;
+    text-align:center;
+}
+
+.district-daily-error{
+    color:#9b5d5d;
+}
+
+@media(max-width:700px){
+    .district-daily-table th,
+    .district-daily-table td{
+        padding:10px;
+        font-size:11px;
+    }
+
+    .district-daily-pagination{
+        gap:5px;
+    }
+
+    .district-daily-pagination button{
+        min-width:30px;
+        height:30px;
+        font-size:10px;
+    }
+
+    .district-page-numbers{
+        max-width:180px;
+    }
+}
